@@ -2,13 +2,13 @@ require('dotenv').config()
 
 const { PORT } = process.env
 
-const conectDataBase = require('./src/lib/db')
+const connectDataBase = require('./src/lib/db')
 const { request } = require('express')
-const server = require('./src/server')
+const server = require('./server')
 
-conectDataBase().then(() => {
+connectDataBase().then(() => {
   console.log('DB connected')
-  server.listen(PORT, () => {
+  server.listen(`${PORT}`, () => {
     console.log(`server is listening in port ${PORT}`)
   })
 })

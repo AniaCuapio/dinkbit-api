@@ -1,10 +1,6 @@
 const express = require('express')
 const users = require('../usecases/users')
 const router = express.Router()
-const auth = require('../middleware/auth')
-
-//Middleware de authentication a nivel de router
-// router.use(auth)
 
 router.get('/', async (request, response) => {
   try {

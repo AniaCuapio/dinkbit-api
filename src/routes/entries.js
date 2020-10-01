@@ -1,5 +1,5 @@
 const express = require('express')
-const entries = require('../usecases/entries')
+const entries = require('../models/entries')
 const router = express.Router()
 
 router.get('/', async (request, response) => {
@@ -64,7 +64,7 @@ router.delete('/:id', async (request, response) => {
     const remove = await entries.remove(id)
     response.json({
       success: true,
-      message: 'entry deleted',
+      message: 'Entry successfully deleted',
     })
   } catch (error) {
     response.status(400)
@@ -85,7 +85,7 @@ router.patch('/:id', async (request, response) => {
       data: {
         update,
       },
-      message: 'Post successfully updated',
+      message: 'Entry successfully updated',
     })
   } catch (error) {
     response.status(400)

@@ -4,13 +4,8 @@ function getAll() {
   return Entries.find()
 }
 
-async function getById(entryId) {
-  const entryById = await Entries.findOne({ _id: entryId }).populate('user')
-  console.log('hi', entryById)
-  if (!entryById) {
-    throw new Error('Dato incorrecto')
-  }
-  return entryById
+function getById(entryId) {
+  return Entries.findById(entryId)
 }
 
 function create(entryData) {

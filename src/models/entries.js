@@ -9,27 +9,32 @@ const entriesSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  user: {
-    type: mongoose.Types.ObjectId,
-    ref: 'pets',
-    required: true,
-  },
   imageurl: {
     type: String,
-    required: false,
-  },
-  tags: {
-    type: String,
-    require: false,
+    required: true,
   },
   createdAt: {
     type: Date,
   },
-  updatedAt: {
-    type: Date,
+  author: {
+    type: String,
+    required: true,
   },
-  likes: {
-    type: Number,
+  authorPost: {
+    type: String,
+    required: true,
+  },
+  authorImage: {
+    type: String,
+    required: true,
+  },
+  authorDescription: {
+    type: String,
+    required: true,
+  },
+  authorPhrase: {
+    type: String,
+    required: true,
   },
 })
 

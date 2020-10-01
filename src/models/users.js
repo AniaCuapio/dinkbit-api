@@ -1,10 +1,6 @@
 const mongoose = require('mongoose')
 const usersSchema = new mongoose.Schema({
-  id: {
-    required: false,
-    type: String,
-  },
-  userName: {
+  fullName: {
     type: String,
     required: true,
   },
@@ -13,34 +9,20 @@ const usersSchema = new mongoose.Schema({
     require: true,
     match: /^.+@.+\..+$/,
   },
-  password: {
-    type: String,
-    required: true,
-  },
-  memberSince: {
-    type: Date,
-  },
-  updatedAt: {
-    type: Date,
-  },
-  isPremiumUser: {
-    type: Boolean,
-  },
-  pets: {
-    type: Object,
-  },
-  shippingAdress: {
-    type: Object,
-  },
-  socialNetworks: {
-    type: Array,
-  },
   phoneNumber: {
     type: Number,
   },
-  //! Restablecer password
-  tokenResetPassword: String,
-  expiraResetPassword: Date,
+  country: {
+    type: String,
+    required: true,
+  },
+  message: {
+    type: Date,
+  },
+  createdAt: {
+    type: Date,
+    required: true
+  }
 })
 
 module.exports = mongoose.model('users', usersSchema)
