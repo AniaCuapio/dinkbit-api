@@ -20,10 +20,6 @@ const entriesSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  authorPost: {
-    type: String,
-    required: true,
-  },
   authorImage: {
     type: String,
     required: true,

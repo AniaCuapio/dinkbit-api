@@ -1,7 +1,7 @@
 {
   "name": "dinkbit-backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "node dinkbit api hosted on heroku",
   "main": "index.js",
   "scripts": {
     "main": "node index.js",
@@ -18,5 +18,8 @@
     "express": "^4.17.1",
     "mongoose": "^5.10.7",
     "nodemon": "^2.0.4"
+  },
+  "engines": {
+    "node": "^12.16.1"
   }
 }
