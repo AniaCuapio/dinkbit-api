@@ -1,0 +1,21 @@
+{
+  "name": "dinkbit-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "main": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "hack_the_job"
+  ],
+  "author": "Ania Cuapio",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.7"
+  }
+}
