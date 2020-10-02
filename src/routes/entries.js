@@ -1,5 +1,5 @@
 const express = require('express')
-const entries = require('../models/entries')
+const entries = require('../usecases/entries')
 const router = express.Router()
 
 router.get('/', async (request, response) => {
